@@ -1,0 +1,8 @@
+1. RAM:
+    - Model: M2Y2G64TU8HD5B-3C
+    - Parameters: DDR2 SDRAM / 2 GB / Mem Clock: 166Mhz / Data Transf Rate: 667Mhz
+2. Power supply:
+    - dimensions: w14x15x8,5 - W x D x H
+    - +3.3V/20A, +5V/14A, +12V1/14A, +12V2/13A, -12V/0.3A, +5VSB/2.5A
+    - max 400X
+

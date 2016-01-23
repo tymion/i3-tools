@@ -8,11 +8,13 @@ volume_icon=
 volume_text=
 volume_ext=
 cmd=
-step=10
+step=5
 
 volume_notify () {
     volume=`pactl list sinks | perl -000ne 'if(/#1/){/(Volume:.*)/; print "$1\n"}' | awk '{ print $5 }' | sed 's/%//g'`
-    if [ "$volume" -lt 33 ]; then
+    if [ "$volume" -eq 0 ]; then
+        volume_icon="notification-audio-volume-off"
+    elif [ "$volume" -lt 33 ]; then
         volume_icon="notification-audio-volume-low"
     elif [ "$volume" -lt 66 ]; then
         volume_icon="notification-audio-volume-medium"
