@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. ./polvention_common.sh
+
+signal_listener $0
+
+while true ; do
+    sleep 10
+done

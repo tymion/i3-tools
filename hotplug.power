@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. ./polvention_common.sh
+
+signal_listener $0
+
+while true ; do
+    battery_path=`acpi_listen -t 1 | grep ac_adapter`
+    if [ ! -z "$battery_path" ]; then
+        ./batteryctl.sh
+    fi
+done
+
+clean_up
